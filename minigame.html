@@ -2,28 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>なるたつのいつもおつかれーいサイト</title>
+        <title>なるたつのいつもおつかれーいミニゲーム</title>
         <meta name="description" content="メインページ">
         <meta name="viewport" content="width=device-width">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/script.js"></script>
-        <link href="css/index.css" rel="stylesheet">
+        <script src="js/minigame.js"></script>
+        <link href="css/minigame.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="header">
             <div class="header-inner">
-                <a class="header-logo" href="index.html">
-                    <img src="images/common/logo.png" alt="メインロゴ">
-                </a>
-                <button class="toggle-menu-button"></button>
                 <div class="header-site-menu">
                     <nav class="site-menu">
                         <ul>
                             <li><a href="omikuji.html">おみくじ</a></li>
-                            <li><a href="minigame.html">ミニゲーム</a></li>
+                            <li><a href="game.html">ミニゲーム</a></li>
                             <li><a href="kadai.html">課題管理アプリ</a></li>
                             <li><a href="members.html">作成メンバー紹介</a></li>
                         </ul>
@@ -34,11 +30,22 @@
         <main class="main">
             <div class="first-view">
                 <div class="first-view-text">
-                    <h1>あなたの学生生活をよりよくしたい</h1>
-                    <p>あなたの"未来へ羽ばたく準備"をサポート</p>
-                    <div class="lead">
-                        <p>たくさんのサービスがあなたの学生生活におけるストレスを軽減</p>
-                    </div>
+                    <h1>頭の体操になるミニゲーム</h1>
+                    <p>与えられた数字と四則演算を用いて10を作ろう</p>
+                    <button onclick="makeProblem()">問題生成</button>
+                    <p id="numbers"></p>
+                    <button onclick="makeAnswer()">数字1</button>
+                    <button onclick="makeAnswer()">数字2</button>
+                    <button onclick="makeAnswer()">数字3</button>
+                    <button onclick="makeAnswer()">数字4</button>
+                    <button onclick="makeAnswer('+')">+</button>
+                    <button onclick="makeAnswer('-')">-</button>
+                    <button onclick="makeAnswer('*')">*</button>
+                    <button onclick="makeAnswer('/')">/</button>
+                    <button onclick="clearAnswer()">クリア</button>
+                    <button onclick="judgeAnswer()">判定</button>
+                    <p id="answer"></p>
+                    <p id="result"></p>
                 </div>
             </div>
         </main>
