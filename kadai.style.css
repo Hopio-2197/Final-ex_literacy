@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.soon {
+    background-color: rgb(255, 54, 54);
+}
+
+.near {
+    background-color: rgb(248, 144, 53);
+}
+
+.over {
+    background-color: rgb(163, 163, 163);
+}
+
+thead tr {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
