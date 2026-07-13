@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ちょーすごい課題管理サイト</title>
+    <link rel="stylesheet" href=".\kadai.style.css">
+</head>
+
+<body>
+    <h1>提出先</h1>
+    <button type="button" onclick="location.href='https://www.meijo-u.ac.jp/student_staff/'">meimo</button>
+    <button type="button" onclick="location.href='https://classroom.google.com/u/0/c/NzY3OTMzNDY3Njcy'">classroom</button>
+
+    <h1>課題リスト</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>科目</th>
+                <th>内容</th>
+                <th>締め切り</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="mylist"></tbody>
+    </table>
+    <input id="subject" type="text" class ="input_data" size="20" placeholder="科目は？">
+    <input id="content" type="text" class ="input_data" size="40" placeholder="内容は？">
+    <input id="deadline" type="date" class ="input_data">
+    <button type="button" onclick="AtoR()">追加</button>
+    <button type="button" onclick="allDelete()">クリア</button>
+
+    <script src="./kadai.app.js"></script>
+</body>
+</html>
