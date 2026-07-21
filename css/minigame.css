@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.first-view-text{
+    font-size: 30px;
+}
+.minigame{
+    position: absolute;
+    margin-left: 50%;
+}
+
+.prob{
+    width: 240px;
+    height: 60px;
+    font-size: large;
+}
+
+.num{
+    width: 60px;
+    height: 32px;
+    font-size: medium;
+}
+
+.ope{
+    width: 48px;
+    height: 32px;
+    font-size: large;
+}
+
+.calc{
+    width: 48px;
+    height: 32px;
+}
+
+.clear{
+    width: 120px;
+    height: 32px;
+    background-color: palegreen;
+    font-size: larger;
+}
+
+.judge{
+    width: 120px;
+    height: 32px;
+    background-color: orangered;
+    font-size: larger;
+}
