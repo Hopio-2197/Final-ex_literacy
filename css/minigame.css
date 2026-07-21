@@ -1,46 +1,107 @@
 @charset "utf-8";
 
+body {
+    margin: 15px;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #f7f9fc 0%, #c0d1fa 100%);
+    color: #2D3748;
+}
+
+footer{
+    width: auto;
+    margin-top: 50px;
+    
+    font-family: sans-serif;
+    color: black;
+}
+
+.numbers{
+    font-size: 50px;
+}
+
+.answer{
+    position: absolute;
+    margin-left: 500px;
+
+    font-size: 50px;
+}
+
+.result{
+    position: absolute;
+    margin-left: 800px;
+
+    font-size: 50px;
+}
+
 .first-view-text{
     font-size: 30px;
 }
+
 .minigame{
-    position: absolute;
-    margin-left: 50%;
+    position: relative;
+    margin: 0%;
 }
 
 .prob{
-    width: 240px;
-    height: 60px;
+    margin-top: 0px;
+
+    width: 120px;
+    height: 32px;
+    background-color: lightskyblue;
+    border-radius: 18px;
+
     font-size: large;
 }
 
 .num{
     width: 60px;
     height: 32px;
+    border-color: black;
+    margin-left: 0.75px;
+    margin-bottom: 5px;
+
     font-size: medium;
 }
 
 .ope{
     width: 48px;
     height: 32px;
+    border-color: black;
+    margin-bottom: 5px;
+
     font-size: large;
 }
 
 .calc{
     width: 48px;
     height: 32px;
+    border-color: black;
+    margin-bottom: 5px;
+
+    font-size: large;
 }
 
 .clear{
-    width: 120px;
+    width: 125px;
     height: 32px;
     background-color: palegreen;
+    margin-left: 0.05px;
+
     font-size: larger;
+    border-radius: 8px;
 }
 
 .judge{
-    width: 120px;
+    width: 125px;
     height: 32px;
     background-color: orangered;
+    border-radius: 8px;
+    margin-left: 0.05px;
+
     font-size: larger;
+    color: white;
+}
+
+.notice{
+    position: relative;
 }

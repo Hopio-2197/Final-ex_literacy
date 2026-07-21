@@ -18,9 +18,11 @@
             </div>
             <div class="minigame">
                 <button class="prob" onclick="makeProblem()">問題生成</button>
-                
-                <p id="numbers"></p>
 
+                <p class="numbers" id="numbers"></p>
+                <p class="answer" id="answer"></p>
+                <p class="result" id="result"></p>
+                
                 <button class="num" onclick="makeAnswer(nums[0],this,0)">数字1</button>
                 <button class="num" onclick="makeAnswer(nums[1],this,0)">数字2</button>
                 <button class="num" onclick="makeAnswer(nums[2],this,0)">数字3</button>
@@ -34,22 +36,30 @@
 
                 <button class="clear" onclick="clearAnswer()">クリア</button>
                 <button class="judge" onclick="judgeAnswer()">判定</button>
-
-                <p id="answer"></p>
-                <p id="result"></p>
             </div>
-            <p>※ 数字は左から1,2と番号付けられています．<br>※ *は×，/は÷に当たります</p>
+            <p class="notice">※ 数字は左から1,2と番号付けられています．<br>※ *は×，/は÷に当たります</p>
+
+            <h2 class="rule">~遊び方~</h2>
+            <ol>
+                <li>問題生成をクリック</li>
+                <li>試行錯誤して数字をそれぞれ一回のみ使用して10を作ろう</li>
+                <li>できたら判定をクリックして確かめよう</li>
+            </ol>
+            <h3 class="hint" >ヒント</h3>
+            <p>時々"="ボタンをクリックして現在の値を見てみよう</p>
+            <p>数字を順番に使う必要はないよ</p>
         </main>
-        <footer class="footer">
-            <nav class="site-menu">
-                <ul>
-                    <li><a href="index.html">メインページ</a></li>
-                    <li><a href="omikuji.html">おみくじ</a></li>
-                    <li><a href="kadai.html">課題管理アプリ</a></li>
-                    <li><a href="members.html">作成メンバー紹介</a></li>
-                </ul>
-            </nav>
-            <p class="copyright"><small>&copy;研究開発リテラシー9班</small></p>
-        </footer>
     </body>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">メインページ</a></li>
+                <li><a href="omikuji.html">おみくじ</a></li>
+                <li><a href="kadai.html">課題管理アプリ</a></li>
+                <li><a href="members.html">作成メンバー紹介</a></li>
+            </ul>
+        </nav>
+        <p class="copyright"><small>&copy;研究開発リテラシー9班</small></p>
+    </footer>
 </html>
