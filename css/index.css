@@ -83,6 +83,12 @@ body{
 .footer {
     background-color: rgba(0, 0, 0, 0.95);
     font-family: sans-serif;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
 }
 
 .footer-logo img{
@@ -95,17 +101,12 @@ body{
 }
 
 .footer .site-menu {
-    margin-top: 10px;
+    margin-top: 20px;
     position: relative;
     display: flex;
     font-family: sans-serif;
-}
-
-.site-menu ul {
-    position: relative;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
+    gap: 40px;
 }
 
 .copyright{
