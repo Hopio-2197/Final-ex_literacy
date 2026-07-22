@@ -74,11 +74,16 @@ h1 {
 }
 header {
     background-color: steelblue;
-    height: 70px;
     width: 100%;
+    min-height: 70px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
     display: flex;
-    justify-content: center; /* 中央寄せ */
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -102,4 +107,52 @@ nav a{
 
 nav a:hover{
     color: #ffd700;
+}
+/* スマホ対応 */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;   /* 縦並びにする */
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* メニューが多い場合は折り返す */
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 16px;
+    }
+        .container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .countdown {
+        font-size: 50px;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .omikuji-button {
+        width: 100%;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .result h2 {
+        font-size: 32px;
+    }
+
+    .result p {
+        font-size: 16px;
+    }
 }

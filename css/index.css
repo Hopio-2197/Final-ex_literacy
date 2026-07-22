@@ -3,15 +3,85 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    background-color: #b0123d;
-    height: 70px;
-    padding: 0 30px;
-    /*バーが動かないようにする*/
+    background-color: #b0123d; /* 色はそのまま */
+    min-height: 70px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+
+    /* バーが動かないようにする */
     position: sticky;
     top: 0;
     z-index: 1000;
 
     font-family: sans-serif;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+
+    /* ヘッダー */
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    /* ナビゲーション */
+    nav {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 16px;
+    }
+
+    /* ヘッダーロゴ */
+    .logo img {
+        height: 45px;
+    }
+
+    /* 背景画像 */
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* ファーストビューの文字 */
+    .first-view-text h1 {
+        font-size: 40px;
+    }
+
+    .first-view-text h4 {
+        font-size: 24px;
+    }
+
+    .first-view-text p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    /* フッター */
+    .footer .site-menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        height: 70px;
+        margin: 10px auto;
+    }
+
+    .site-menu ul {
+        text-align: center;
+    }
 }
 
 .logo img{
