@@ -1,3 +1,4 @@
+/* 全体のデザイン */
 body {
     font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
     background: linear-gradient(135deg, #FFF8F0, #F5E6C8);
@@ -6,6 +7,7 @@ body {
     min-height: 100vh;
 }
 
+/* コンテナ */
 .container {
     background-color: #FFFFFF;
     padding: 40px;
@@ -15,30 +17,34 @@ body {
     width: 90%;
     max-width: 500px;
     border: 3px solid #D4AF37;
-    margin: 50px auto; /* 上下に余白をつけて中央配置 */
+    margin: 50px auto;
 }
 
+/* タイトル */
 h1 {
-    color: #B22222; /* 深紅 */
+    color: #B22222;
     margin-bottom: 10px;
 }
 
+/* 説明文 */
 .description {
     color: #2F1B0C;
     margin-bottom: 30px;
 }
 
+/* カウントダウン */
 .countdown {
     font-size: 80px;
     font-weight: bold;
-    color: #D4AF37; /* 金色 */
+    color: #D4AF37;
     height: 100px;
     line-height: 100px;
     margin-bottom: 20px;
 }
 
+/* おみくじボタン */
 .omikuji-button {
-    background-color: #B22222; /* 深紅 */
+    background-color: #B22222;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -49,31 +55,34 @@ h1 {
 }
 
 .omikuji-button:hover {
-    background-color: #8B0000; /* 濃い赤 */
+    background-color: #8B0000;
     transform: scale(1.05);
 }
 
+/* 結果表示 */
 .result {
     margin-top: 30px;
     padding: 20px;
     border-radius: 15px;
-    background-color: #FFF5E1; /* 和紙色 */
-    border: 2px solid #D4AF37; /* 金色の枠 */
+    background-color: #FFF5E1;
+    border: 2px solid #D4AF37;
 }
 
 .result h2 {
     font-size: 40px;
     margin-bottom: 15px;
-    color: #B22222; /* 深紅 */
+    color: #B22222;
 }
 
 .result p {
     font-size: 18px;
     line-height: 1.6;
-    color: #2F1B0C; /* こげ茶 */
+    color: #2F1B0C;
 }
+
+/* ヘッダー（上書きした内容） */
 header {
-    background-color: steelblue;
+    background-color: rgb(180, 165, 70);
     width: 100%;
     min-height: 70px;
     padding: 10px 20px;
@@ -89,29 +98,39 @@ header {
     z-index: 1000;
 }
 
-.logo img{
+/* ロゴ画像 */
+.logo img {
     height: 60px;
     width: auto;
     display: block;
 }
 
-nav a{
+/* ナビゲーション */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
     color: black;
     text-decoration: none;
-
-    margin-left: 25px;
-
+    margin: 0 15px;
     font-size: 20px;
     font-weight: bold;
 }
 
-nav a:hover{
+nav a:hover {
     color: #ffd700;
 }
+
 /* スマホ対応 */
 @media (max-width: 600px) {
+
+    /* ヘッダーを縦並びに */
     header {
-        flex-direction: column;   /* 縦並びにする */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px;
@@ -119,35 +138,45 @@ nav a:hover{
         text-align: center;
     }
 
+    /* ロゴを少し小さく */
+    .logo img {
+        height: 45px;
+        margin-bottom: 8px;
+    }
+
+    /* ナビゲーションを折り返し */
     nav {
-        margin-top: 8px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; /* メニューが多い場合は折り返す */
+        margin-top: 5px;
     }
 
     nav a {
         margin: 5px 10px;
         font-size: 16px;
     }
-        .container {
+
+    /* コンテナをスマホ幅に合わせる */
+    .container {
         width: 95%;
         padding: 20px;
         margin: 20px auto;
+        box-sizing: border-box;
     }
 
+    /* カウントダウンを小さく */
     .countdown {
         font-size: 50px;
         height: 70px;
         line-height: 70px;
     }
 
+    /* ボタンを押しやすく */
     .omikuji-button {
         width: 100%;
         font-size: 18px;
         padding: 15px;
     }
 
+    /* 結果文字を調整 */
     .result h2 {
         font-size: 32px;
     }
