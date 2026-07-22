@@ -1,196 +1,232 @@
 @charset "utf-8";
 
+/* 全体設定 */
 body {
     margin: 15px;
     font-family: sans-serif;
-    /*background: linear-gradient(90deg, #f7f9fc 0%, #c0d1fa 100%);*/
+    /* background: linear-gradient(90deg, #f7f9fc 0%, #c0d1fa 100%); */
     background-image: url("../images/common/minigame_back.png");
     background-size: cover;        /* 画面全体を覆う */
     background-position: center;   /* 中央に配置 */
     background-repeat: no-repeat;  /* 繰り返さない */
-    background-attachment: fixed; 
+    background-attachment: fixed;
     color: #2D3748;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ヘッダー（上書き後） */
+header {
+    background-color: steelblue;
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 
-    background-color:steelblue ;
-    height: 70px;
-    padding: 0 30px;
-    /*バーが動かないようにする*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* バーが動かないようにする */
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
 
-.logo img{
+/* ロゴ */
+.logo img {
     height: 60px;
     width: auto;
     display: block;
 }
 
-nav a{
+/* ナビゲーション */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
     color: black;
     text-decoration: none;
-
-    margin-left: 25px;
-
+    margin: 0 15px;
     font-size: 20px;
     font-weight: bold;
 }
 
-nav a:hover{
+nav a:hover {
     color: #ffd700;
 }
 
-.numbers{
+/* 数字表示 */
+.numbers {
     font-size: 50px;
 }
 
-.answer{
+/* 回答欄 */
+.answer {
     position: absolute;
     margin-left: 500px;
-
     font-size: 50px;
 }
 
-.result{
+/* 結果表示 */
+.result {
     position: absolute;
     margin-left: 800px;
-
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 60px;
 }
 
-.first-view-text{
+/* タイトル文字 */
+.first-view-text {
     font-size: 30px;
 }
 
-.minigame{
+/* ミニゲーム全体 */
+.minigame {
     position: relative;
     margin: 0%;
 }
 
-.prob{
+/* 問題ボタン */
+.prob {
     margin-top: 0px;
-
     width: 120px;
     height: 32px;
     background-color: lightskyblue;
     border-radius: 18px;
-
     font-size: large;
 }
 
-.num{
+/* 数字ボタン */
+.num {
     width: 60px;
     height: 32px;
     border-color: black;
     margin-left: 0.75px;
     margin-bottom: 5px;
-
     font-size: medium;
 }
 
-.ope{
+/* 演算子ボタン */
+.ope {
     width: 48px;
     height: 32px;
     border-color: black;
     margin-bottom: 5px;
-
     font-size: large;
 }
 
-.calc{
+/* 計算ボタン */
+.calc {
     width: 48px;
     height: 32px;
     border-color: black;
     margin-bottom: 5px;
-
     font-size: large;
 }
 
-.clear{
+/* クリアボタン */
+.clear {
     width: 125px;
     height: 32px;
     background-color: palegreen;
     margin-left: 0.05px;
-
     font-size: larger;
     border-radius: 8px;
 }
 
-.judge{
+/* 判定ボタン */
+.judge {
     width: 125px;
     height: 32px;
     background-color: orangered;
     border-radius: 8px;
     margin-left: 0.05px;
-
     font-size: larger;
     color: white;
 }
 
-.notice{
+/* 注意書き */
+.notice {
     position: relative;
 }
 
-@media (max-width: 800px){
+/* スマホ対応 */
+@media (max-width: 800px) {
 
-    body{
+    body {
         margin: 8px;
+        background-attachment: scroll;
     }
 
-    header{
+    /* ヘッダーを縦並びに */
+    header {
         flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    nav{
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
+        align-items: center;
+        padding: 10px;
+        min-height: auto;
+        text-align: center;
     }
 
-    nav a{
-        margin-left: 0;
+    /* ロゴを少し小さく */
+    .logo img {
+        height: 45px;
+        margin-bottom: 8px;
+    }
+
+    /* ナビゲーションを折り返し */
+    nav {
+        margin-top: 5px;
+    }
+
+    nav a {
+        margin: 5px 10px;
         font-size: 16px;
     }
 
-    .first-view-text{
+    /* タイトル文字を調整 */
+    .first-view-text {
         font-size: 20px;
         text-align: center;
     }
 
-    .numbers{
+    /* 数字表示を小さく */
+    .numbers {
         font-size: 36px;
         text-align: center;
     }
 
-    .answer{
+    /* 回答欄の位置を通常配置に戻す */
+    .answer {
+        position: static;
+        margin-left: 0;
         font-size: 32px;
         text-align: center;
+        margin-top: 10px;
     }
 
-    .result{
+    /* 結果表示の位置を通常配置に戻す */
+    .result {
+        position: static;
+        margin-left: 0;
         font-size: 40px;
         text-align: center;
+        margin-top: 10px;
     }
 
-    .minigame{
+    /* ミニゲーム全体を中央寄せ */
+    .minigame {
         text-align: center;
     }
 
+    /* ボタンを押しやすく */
     .prob,
     .clear,
-    .judge{
+    .judge {
         width: 90%;
         max-width: 250px;
         height: 45px;
@@ -199,7 +235,7 @@ nav a:hover{
         display: block;
     }
 
-    .num{
+    .num {
         width: 60px;
         height: 45px;
         font-size: 15px;
@@ -207,16 +243,17 @@ nav a:hover{
     }
 
     .ope,
-    .calc{
+    .calc {
         width: 60px;
         height: 45px;
         font-size: 20px;
         margin: 3px;
     }
 
+    /* 文章サイズを調整 */
     ol,
     .notice,
-    .hint{
+    .hint {
         font-size: 16px;
     }
 }

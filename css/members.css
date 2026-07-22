@@ -34,19 +34,21 @@ header h1 {
     margin-bottom: 30px;
     overflow: hidden;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+    background-color: steelblue;
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 
-    background-color:steelblue ;
-    height: 70px;
-    padding: 0 30px;
-    /*バーが動かないようにする*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
 
 .logo img{
@@ -115,11 +117,4 @@ nav a:hover{
     border-color: #3498db;
     outline: none;
     box-shadow: 0 0 5px rgba(52,152,219,0.5);
-}
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-    .member-card {
-        flex-direction: column;
-    }
 }
