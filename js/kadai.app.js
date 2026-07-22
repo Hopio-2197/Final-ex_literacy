@@ -41,8 +41,11 @@ function loadList() {
     }
 }
 
-//サイトを開いたとき，またはリロード時に関数ltoR()が実行されるようにする工夫
-document.addEventListener('DOMContentLoaded', ltoR);
+//サイトを開いたとき，またはリロード時に関数ltoR()と関数setSeasonBackgroundが実行されるようにする工夫
+document.addEventListener('DOMContentLoaded', () => {
+    ltoR();
+    setSeasonBackground();
+});
 
 //loadList()とRow_Painted()の2つの関数をまとめた関数
 function ltoR(){
@@ -225,7 +228,29 @@ function Praise(){
         "はい勝ち～！（笑）",
     ];
 
-    const index = Math.floor(Math.random() * Praises.length) //ランダムな添え字を取得する仕組み
+    const index = Math.floor(Math.random() * Praises.length); //ランダムな添え字を取得する仕組み
     
-    return Praises[index]
+    return Praises[index];
+}
+
+//季節に応じて背景の画像を変える関数
+function setSeasonBackground() {
+    const month = new Date().getMonth() + 1; //0-11だから1を足す
+
+    let season;
+
+    if (month >= 3 && month <= 5) {
+        season = "spring";
+    }
+    else if (month >= 6 && month <= 8) {
+        season = "summer";
+    }
+    else if (month >= 9 && month <= 11) {
+        season = "autumn";
+    }
+    else {
+        season = "winter";
+    }
+
+    document.body.classList.add(season); //bodyタグにclassを追加する
 }
