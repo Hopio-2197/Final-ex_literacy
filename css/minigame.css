@@ -138,3 +138,85 @@ nav a:hover{
 .notice{
     position: relative;
 }
+
+@media (max-width: 800px){
+
+    body{
+        margin: 8px;
+    }
+
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav a{
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .first-view-text{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .numbers{
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .answer{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .result{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .minigame{
+        text-align: center;
+    }
+
+    .prob,
+    .clear,
+    .judge{
+        width: 90%;
+        max-width: 250px;
+        height: 45px;
+        font-size: 18px;
+        margin: 5px auto;
+        display: block;
+    }
+
+    .num{
+        width: 60px;
+        height: 45px;
+        font-size: 15px;
+        margin: 3px;
+    }
+
+    .ope,
+    .calc{
+        width: 60px;
+        height: 45px;
+        font-size: 20px;
+        margin: 3px;
+    }
+
+    ol,
+    .notice,
+    .hint{
+        font-size: 16px;
+    }
+}
