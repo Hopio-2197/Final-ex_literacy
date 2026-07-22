@@ -1,5 +1,25 @@
-footer img {
-    max-width:100%;
-    height:auto;
-    display:block;
+.header-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header {
+    width: 100%;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer .site-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
