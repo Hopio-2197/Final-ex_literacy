@@ -76,19 +76,20 @@ table {
     background-color: rgba(255,255,255,0.7);
 }
 
+/*パスの先頭を../とした．ちょっとわからん*/
 .spring {
-    background-image: url("./images/common/spring.jpg");
+    background-image: url("../images/common/spring.jpg");
 }
 
 .summer {
-    background-image: url("./images/common/summer.jpg");
+    background-image: url("../images/common/summer.jpg");
 }
 
 .autumn {
-    background-image: url("./images/common/autumn.jpg");
+    background-image: url("../images/common/autumn.jpg");
 }
 
 .winter {
-    background-image: url("./images/common/winter.jpg");
+    background-image: url("../images/common/winter.jpg");
 }
 
