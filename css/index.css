@@ -1,3 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #b0123d;
+    height: 70px;
+    padding: 0 30px;
+    /*バーが動かないようにする*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    font-family: sans-serif;
+}
+
+.logo img{
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #ffd700;
+}
+
 .header-logo img {
     max-width: 100%;
     height: auto;
@@ -5,21 +41,47 @@
 }
 
 .header {
-    width: 100%;
+    position: relative;
+    width: 100px;
+    height: 45px;
+}
+
+.first-view-text{
+    font-size: 40px;
+}
+
+.lead{
+    font-size: 20px;
 }
 
 .footer {
     background-color: rgba(0, 0, 0, 0.7);
+    font-family: sans-serif;
+}
+
+.footer-logo img{
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 100px;
+    width: auto;
+    display: block;
 }
 
 .footer .site-menu {
+    margin-top: 10px;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: sans-serif;
 }
 
 .site-menu ul {
+    position: relative;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.copyright{
+    color: white;
 }
